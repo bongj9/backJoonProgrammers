@@ -10,29 +10,32 @@ public class Main {
         //testCase받기
         int testCase = Integer.parseInt(line.readLine());
         //반복횟수,cnt1,cnt0값을 프린트해주기
-
+        //전역변수,지역변수
         for (int i = 0; i < testCase; i++) {
             int cnt1 = 0;
             int cnt0 = 0;
             int input = Integer.parseInt(line.readLine());
             fibonacci(input);
 
-            //여기서 1과0을 if문으로 나누기
 
+            //여기서 1과0을 if문으로 나누기
+            //재귀함수 자기자신을 호출하는거 = dp 이전의 결과값을 얻어가는것
         }
     }
 
     //피보나치 메서드 구현
-    //값을 구현하는거보다 그냥 fibonacci(1),fibonacci(0)의 개수를 구하면 되는거다 
+    //값을 구현하는거보다 그냥 fibonacci(1),fibonacci(0)의 개수를 구하면 되는거다
+    //일반적인 피보나치 수 재귀함수
     public static int fibonacci(int n) {
         if (n == 0) {
-            return 0; // Correct base case for n == 0
+            return 0; // Correct base case for n == 0 기본케이스
         } else if (n == 1) {
             return 1; // Correct base case for n == 1
         }
         return fibonacci(n - 1) + fibonacci(n - 2); // Recursive calls
     }
 }
+
 
 
 
@@ -44,7 +47,7 @@ public class Main {
             System.out.println("1");
             return 1;
         } else {
-            return fibonacci(n‐1) + fibonacci(n‐2);
+            return fibonacci(n‐1) + fibdiehddidididicci(n‐2);
         }
         //int fibonacci(int n) {
         //    if (n == 0) {
