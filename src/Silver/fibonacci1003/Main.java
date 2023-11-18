@@ -35,7 +35,7 @@ public class Main {
         return fibonacci(n - 1) + fibonacci(n - 2); // Recursive calls
     }
 }
-
+//피보나치=>재귀함수 공부함과 동시에 스택에 저장되는거 생각
 
 
 
@@ -64,8 +64,7 @@ public class Main {
 
 }
 
-*/
-/*
+*
 import java.util.Scanner;
 
 public class Main {
