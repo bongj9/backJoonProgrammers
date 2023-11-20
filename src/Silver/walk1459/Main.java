@@ -15,7 +15,7 @@ public class Main {
         long w = Long.parseLong(line[2]);
         long s = Long.parseLong(line[3]);
 
-
+        cal(x, y, w, s);
 
     }
 
