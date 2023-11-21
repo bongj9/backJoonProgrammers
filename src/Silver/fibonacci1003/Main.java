@@ -3,6 +3,12 @@ package Silver.fibonacci1003;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+
+/*
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -35,10 +41,11 @@ public class Main {
         return fibonacci(n - 1) + fibonacci(n - 2); // Recursive calls
     }
 }
-//피보나치=>재귀함수 공부함과 동시에 스택에 저장되는거 생각
+//피보나치=>재귀함수 공부함과 동시에 스택에 저장되는거 생ㅔ
 
 
 
+*/
 /*    public static int fibonacci(int n) {
         if (n == 0) {
             System.out.println("0");
@@ -61,6 +68,8 @@ public class Main {
         //    }
         //}
     }*//*
+ */
+/*
 
 }
 
@@ -95,3 +104,32 @@ public class Main {
         scanner.close();
     }
 }*/
+public class Main {
+    // 메모이제이션을 위한 배열, 각 숫자의 0과 1 호출 횟수를 저장
+    static int[][] memo = new int[41][2];
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testcase = Integer.parseInt(br.readLine());
+
+        // 기본 케이스 초기화
+        memo[0][0] = 1; // 0 호출 횟수
+        memo[0][1] = 0; // 1 호출 횟수
+        memo[1][0] = 0;
+        memo[1][1] = 1;
+
+        // 피보나치 수열 계산 및 호출 횟수 업데이트
+        for (int i = 2; i <= 40; i++) {
+            for (int j = 0; j <= 1; j++) {
+                memo[i][j] = memo[i - 1][j] + memo[i - 2][j];
+            }
+        }
+
+        // 테스트 케이스 처리
+        for (int i = 0; i < testcase; i++) {
+            int n = Integer.parseInt(br.readLine());
+            System.out.println(memo[n][0] + " " + memo[n][1]);
+        }
+    }
+}
+

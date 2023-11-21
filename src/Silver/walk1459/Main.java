@@ -22,15 +22,14 @@ public class Main {
     //알고리즘 구현
     public static void cal(Long x, Long y, Long w, Long s) {
         long temp1 = (x + y) * w;
-        long temp2 = 0;
-        if ((x + y) % 2 == 0) {
-            temp2 = Math.max(x, y) * s;
+        long temp2 = (Math.min(x, y)) * s + (Math.abs(x - y)) * w;
+        long temp3;
 
+        if ((x + y) % 2 == 0) {
+            temp3 = Math.max(x, y) * s;
+        } else {
+            temp3 = ((Math.max(x, y) - 1) * s) + w;
         }
-        else{
-            temp2 = (Math.max(x, y) * s )+ w;
-        }
-        long temp3 = (Math.min(x, y))*s+(Math.abs(x-y))*w;
 
         System.out.println(Math.min(temp1, Math.min(temp2, temp3)));
     }
