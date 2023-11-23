@@ -46,3 +46,4 @@ public class Main {
         }
     }
 }
+//for each문도 생각해보기 ,정렬다시 암기
