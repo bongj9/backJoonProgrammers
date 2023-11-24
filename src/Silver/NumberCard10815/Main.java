@@ -10,7 +10,8 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int testcase = Integer.parseInt(br.readLine()); //처음 N개를 넣어줌
         String [] Sysinput = br.readLine().split(" ");
-        int[] arr = Arrays.stream(Integer.parseInt(Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+
 /*        for (int i = 0; i < testcase; i++) {
             arr[i] = Integer.parseInt(Sysinput[i]);
         }*/
