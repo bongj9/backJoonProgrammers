@@ -18,12 +18,23 @@ public class Main {
     public static void CardMatch(int[] arr, int[] arr2) {
         for (int i = 0; i <arr.length; i++) {
             for (int j = 0; j <arr2.length ; j++) {
-                if (arr[i] ==arr2 [j]){
+                if (arr[i] == arr2 [j]){
                     System.out.println(1);
                 } else System.out.println(0);
             }
         }
-
     }
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
 
 }
