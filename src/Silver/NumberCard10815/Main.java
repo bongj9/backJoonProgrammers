@@ -10,16 +10,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int testcase = Integer.parseInt(br.readLine()); //처음 N개를 넣어줌
         String [] Sysinput = br.readLine().split(" ");
-        int[] arr = new int[testcase];
-        for (int i = 0; i < testcase; i++) {
+        int[] arr = Arrays.stream(Integer.parseInt(Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+/*        for (int i = 0; i < testcase; i++) {
             arr[i] = Integer.parseInt(Sysinput[i]);
-        }
+        }*/
         int userTestCase = Integer.parseInt(br.readLine());
         String[] UserInput = br.readLine().split(" ");
-        int[] arr2 = new int[userTestCase];
-        for (int i = 0; i < userTestCase; i++) {
-            arr2[i] = Integer.parseInt(UserInput[i]);
-        }
+        int[] arr2 = Arrays.stream(Integer.parseInt(Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         Arrays.sort(arr);
         CardMatch(arr, arr2);
 
