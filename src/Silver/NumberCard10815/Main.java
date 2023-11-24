@@ -3,38 +3,40 @@ package Silver.NumberCard10815;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.concurrent.LinkedBlockingDeque;
-
+import java.util.Arrays;
+import java.util.HashSet;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int testcase = Integer.parseInt(br.readLine()); //처음 N개를 넣어줌
         String [] Sysinput = br.readLine().split(" ");
+        int[] arr = new int[testcase];
+        for (int i = 0; i < testcase; i++) {
+            arr[i] = Integer.parseInt(Sysinput[i]);
+        }
         int userTestCase = Integer.parseInt(br.readLine());
         String[] UserInput = br.readLine().split(" ");
+        int[] arr2 = new int[userTestCase];
+        for (int i = 0; i < userTestCase; i++) {
+            arr2[i] = Integer.parseInt(UserInput[i]);
+        }
+        Arrays.sort(arr);
+        CardMatch(arr, arr2);
 
     }
 
     public static void CardMatch(int[] arr, int[] arr2) {
-        for (int i = 0; i <arr.length; i++) {
-            for (int j = 0; j <arr2.length ; j++) {
-                if (arr[i] == arr2 [j]){
-                    System.out.println(1);
-                } else System.out.println(0);
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : arr) {
+            set.add(num);
+        }
+
+        for (int query : arr2) {
+            if (set.contains(query)) {
+                System.out.print(1 + " ");
+            } else {
+                System.out.print(0 + " ");
             }
         }
     }
-    public static void bubbleSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
-    }
-
-
 }
