@@ -21,8 +21,12 @@ public class Main {
             }
 
         }
+        int sum = 0;
+        while (!stack.isEmpty()) {
+            sum += stack.pop();
+        }
 
-
+        System.out.println(sum);
         }
 
     }
