@@ -17,7 +17,7 @@ public class Main {
         }*/
         int userTestCase = Integer.parseInt(br.readLine());
         String[] UserInput = br.readLine().split(" ");
-        int[] arr2 = Arrays.stream(Integer.parseInt(Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        int[] arr2 = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         Arrays.sort(arr);
         CardMatch(arr, arr2);
 
