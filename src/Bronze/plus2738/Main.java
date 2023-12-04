@@ -14,7 +14,7 @@ public class Main {
 
         int[][] X = new int[N][M];
 
-        // 행렬 X 입력 받기
+        // 행렬 X 입력 받기ㅇ
         for (int i = 0; i < N; i++) {
             String[] input = br.readLine().split(" ");
             for (int j = 0; j < M; j++) {
