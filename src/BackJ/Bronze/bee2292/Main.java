@@ -1,4 +1,4 @@
-package Bronze.bee2292;
+package BackJ.Bronze.bee2292;
 
 import java.io.BufferedReader;
 import java.io.IOException;

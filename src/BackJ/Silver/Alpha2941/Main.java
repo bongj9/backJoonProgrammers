@@ -1,4 +1,4 @@
-package Silver.Alpha2941;
+package BackJ.Silver.Alpha2941;
 
 import java.io.BufferedReader;
 import java.io.IOException;

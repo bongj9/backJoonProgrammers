@@ -1,4 +1,4 @@
-package Gold.Mod17425;
+package BackJ.Gold.Mod17425;
 
 import java.util.Scanner;
 

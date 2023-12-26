@@ -1,4 +1,4 @@
-package Silver.prince1004;
+package BackJ.Silver.prince1004;
 
 // 기타 필요한 import문
 

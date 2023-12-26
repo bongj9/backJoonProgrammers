@@ -1,4 +1,4 @@
-package Silver.walk1459;
+package BackJ.Silver.walk1459;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package Silver.Average25206;
+package BackJ.Silver.Average25206;
 
 import java.io.BufferedReader;
 import java.io.IOException;

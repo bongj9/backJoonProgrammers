@@ -1,4 +1,4 @@
-package Silver.Ertos2960;
+package BackJ.Silver.Ertos2960;
 
 import java.io.BufferedReader;
 import java.io.IOException;

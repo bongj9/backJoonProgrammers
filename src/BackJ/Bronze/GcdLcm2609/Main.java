@@ -1,4 +1,4 @@
-package Bronze.GcdLcm2609;
+package BackJ.Bronze.GcdLcm2609;
 
 import java.util.Scanner;
 

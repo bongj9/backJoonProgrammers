@@ -1,4 +1,4 @@
-package Bronze.L2720;
+package BackJ.Bronze.L2720;
 
 import java.io.BufferedReader;
 import java.io.IOException;

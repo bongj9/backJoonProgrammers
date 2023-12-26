@@ -1,9 +1,8 @@
-package Silver.fibonacci1003;
+package BackJ.Silver.fibonacci1003;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /*
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package Bronze.divide2231;
+package BackJ.Bronze.divide2231;
 
 import java.io.*;
 

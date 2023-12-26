@@ -1,4 +1,4 @@
-package Bronze.Square2903;
+package BackJ.Bronze.Square2903;
 
 import java.io.BufferedReader;
 import java.io.IOException;

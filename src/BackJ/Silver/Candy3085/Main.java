@@ -1,4 +1,4 @@
-package Silver.Candy3085;
+package BackJ.Silver.Candy3085;
 
 import java.io.BufferedReader;
 import java.io.IOException;

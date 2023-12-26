@@ -1,4 +1,4 @@
-package Silver.BackJ17427;
+package BackJ.Silver.BackJ17427;
 
 /*import java.util.Scanner;
 

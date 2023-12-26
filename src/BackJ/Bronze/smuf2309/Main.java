@@ -1,4 +1,4 @@
-package Bronze.smuf2309;
+package BackJ.Bronze.smuf2309;
 
 import java.io.BufferedReader;
 import java.io.IOException;
