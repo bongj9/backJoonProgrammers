@@ -17,4 +17,21 @@ public class Solution {
             return false;
         }
 
+    private boolean isDistanced(char[][] room, int x, int y) {
+        for (int d = 0; d < 4; d++) {
+            int nx = x + dx[d];
+            int ny = y + dy[d];
+            if (ny < 0 || ny >= room.length || nx < 0 || nx >= room[ny].length) continue;
+            switch (room[ny][nx]) {
+                case 'P':
+                    return false;
+                case 'O':
+                    if (isNextToVolunteer(room, nx, ny, 3 - d)) {
+                        return false;
+                    }
+                    break;
+            }
+        }
+        return true;
+    }
     }
