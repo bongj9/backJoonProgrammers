@@ -34,4 +34,16 @@ public class Solution {
         }
         return true;
     }
+
+    private boolean isDistanced(char[][] room) {
+        for (int y = 0; y < room.length; y++) {
+            for (int x = 0; x < room[y].length; x++) {
+                if(room[y][x] != 'P') continue;
+                if (!isDistanced(room, x, y)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
+}
