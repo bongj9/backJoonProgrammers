@@ -5,14 +5,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    static int size = 0;
-    static int thick = 0;
+    private static String input;
+    private static StringBuilder sb = new StringBuilder();
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int testcase = Integer.parseInt(br.readLine());
-        for (int i = 0; i < testcase; i++) {
-            int 
+        int T = Integer.parseInt(br.readLine());
+        for (int i = 0; i < T; i++) {
+            input = br.readLine();
+            if (check(0, input.length() - 1)) {
+                sb.append("YES").append("\n");
+            } else {
+                sb.append("NO").append("\n");
+            }
         }
-
+        System.out.println(sb);
     }
 }
