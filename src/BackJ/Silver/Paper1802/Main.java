@@ -21,4 +21,17 @@ public class Main {
         }
         System.out.println(sb);
     }
+
+    private static boolean check(int start, int end) {
+        if (start == end) {
+            return true;
+        }
+        int mid = (start + end) / 2;
+        for (int i = start; i < mid; i++) {
+            if (input.charAt(i) == input.charAt(end - i)) {
+                return false;
+            }
+        }
+        return check(start, mid - 1) && check(mid + 1, end);
+    }
 }
