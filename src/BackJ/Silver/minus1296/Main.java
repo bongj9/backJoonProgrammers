@@ -3,30 +3,54 @@ package BackJ.Silver.minus1296;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String [] inputs = br.readLine().split(" ");
-        int n = Integer.parseInt(inputs[0]);
-        int m = Integer.parseInt(inputs[1]);
-        int[] a = new int[n];
-        int[] b = new int[m];
-        Map<Integer, Integer> aMap = new HashMap<>();
-        int count = 0;
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+
+        Set<Integer> aSet = new HashSet<>();
+        Set<Integer> bSet = new HashSet<>();
+
+        //A열 받기
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
-            a[i] = Integer.parseInt(Arrays.toString(br.readLine().split(" ")));
-            aMap.put(i, a[i]);
+            aSet.add(Integer.parseInt(st.nextToken()));
         }
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < m; i++) {
-            b[i] = Integer.parseInt(Arrays.toString(br.readLine().split(" ")));
+            bSet.add(Integer.parseInt(st.nextToken()));
         }
+        int different = differentSum(aSet,bSet);
+        System.out.println(different);
+/*
+        int count = 0;
+        for (Integer i : aSet) {
+            if(!bSet.contains(i)) count++;
+        }
+        for (Integer i : bSet) {
+            if(!aSet.contains(i)) count++;
+        }
+        System.out.println(count);
+*/
 
 
         }
-
+    public static int differentSum (Set <Integer> aSet, Set<Integer> bSet){
+        int count = 0;
+        for (Integer i : aSet) {
+            if(!bSet.contains(i)) count ++;
+        }
+        for (Integer i : bSet) {
+            if (!aSet.contains(i)) {
+                count++;
+            }
+        }
+        return count;
     }
+}
 
