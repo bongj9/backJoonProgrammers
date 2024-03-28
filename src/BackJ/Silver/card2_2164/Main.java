@@ -10,18 +10,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         Queue<Integer> queue = new LinkedList<>();
-        int tmp = 0;
-        int[] input = new int[n];
-        for (int i = n; i > 0; i--) {
-            input[i] = i;
-            if (input[i] != 1) {
-                queue.add(input[i]);
-            }
+        for (int i = 1; i <= n; i++) {
+            queue.add(i);
         }
-        Queue<Integer> queue1 = new LinkedList<>();
-        //상위값이 입력값과 같을때 멈춤
-        while (n != queue1.peek()) {
+        while (queue.size() > 1) {
+            queue.remove();
+            queue.add(queue.remove());
+        }
 
-        }
+        System.out.println(queue.peek());
     }
 }
