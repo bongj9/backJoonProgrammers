@@ -42,6 +42,7 @@ public class Main {
     }
 }
 */
+/*
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -94,5 +95,44 @@ public class Main {
             this.index = index;
             this.value = value;
         }
+    }
+}
+*/
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        int[] numbers = new int[N]; // 풍선 안의 숫자를 저장하는 배열
+        LinkedList<Integer> indexDeque = new LinkedList<>(); // 풍선의 인덱스를 저장하는 덱
+        for (int i = 0; i < N; i++) {
+            numbers[i] = Integer.parseInt(st.nextToken());
+            indexDeque.add(i);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        int currentIndex = 0; // 현재 풍선의 인덱스
+        for (int i = 0; i < N; i++) {
+            int index = indexDeque.remove(currentIndex);
+            sb.append(index + 1).append(" ");
+            if (indexDeque.isEmpty()) break;
+
+            int move = numbers[index];
+            if (move > 0) {
+                currentIndex = (currentIndex + move - 1) % indexDeque.size();
+            } else {
+                currentIndex = (currentIndex + move) % indexDeque.size();
+                if (currentIndex < 0) currentIndex += indexDeque.size();
+            }
+        }
+
+        System.out.println(sb.toString());
     }
 }
