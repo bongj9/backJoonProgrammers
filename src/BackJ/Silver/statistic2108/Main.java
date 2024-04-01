@@ -82,3 +82,70 @@ public class Main {
     }
 
 }
+
+/*
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int[] inputs = new int[n];
+        for (int i = 0; i < n; i++) {
+            inputs[i] = Integer.parseInt(br.readLine());
+        }
+        Arrays.sort(inputs); // 입력받은 수들을 정렬합니다.
+
+        System.out.println(s1(inputs));
+        System.out.println(s2(inputs));
+        System.out.println(s3(inputs));
+        System.out.println(s4(inputs));
+    }
+
+    private static int s1(int[] inputs) {
+        int sum = 0;
+        for (int value : inputs) {
+            sum += value;
+        }
+        return Math.round((float)sum / inputs.length);
+    }
+
+    private static int s2(int[] inputs) {
+        // 중앙값
+        return inputs[inputs.length / 2];
+    }
+
+    private static int s3(int[] inputs) {
+        // 최빈값
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int input : inputs) {
+            frequencyMap.put(input, frequencyMap.getOrDefault(input, 0) + 1);
+        }
+
+        int maxFrequency = frequencyMap.values().stream().max(Integer::compare).orElse(0);
+
+        List<Integer> mostFrequent = frequencyMap.entrySet().stream()
+                .filter(entry -> entry.getValue() == maxFrequency)
+                .map(Map.Entry::getKey)
+                .sorted()
+                .collect(Collectors.toList());
+
+        // 최빈값이 여러 개 있을 경우, 두 번째로 작은 값을 선택
+        return mostFrequent.size() > 1 ? mostFrequent.get(1) : mostFrequent.get(0);
+    }
+
+    private static int s4(int[] inputs) {
+        // 범위
+        return inputs[inputs.length - 1] - inputs[0];
+    }
+}
+
+ */
