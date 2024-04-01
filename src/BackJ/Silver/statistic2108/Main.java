@@ -25,13 +25,22 @@ public class Main {
 
     }
 
-    private static int s1(int[] inputs) {
+    /*private static int s1(int[] inputs) {
         int sum = 0;
         for (int i = 0; i < inputs.length; i++) {
           sum += inputs[i];
         }
         return sum / inputs.length;
     }
+*/
+    private static int s1(int[] inputs) {
+        double sum = 0; // 변경: 정확한 평균을 위해 double 사용
+        for (int i = 0; i < inputs.length; i++) {
+            sum += inputs[i];
+        }
+        return (int)Math.round(sum / inputs.length); // 변경: 반올림하여 int로 형변환
+    }
+    //double로 소수점까지 받고 반올림하여 형변환까지 해줘야한다
 
     private static int s2(int[] inputs) {
         return inputs[inputs.length / 2];
