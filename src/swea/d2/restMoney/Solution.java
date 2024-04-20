@@ -54,3 +54,42 @@ public class Solution {
         }
     }
 }
+/*
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testcase = Integer.parseInt(br.readLine());
+
+        // 화폐 단위를 배열로 정의
+        int[] denominations = {50000, 10000, 5000, 1000, 500, 100, 50, 10};
+
+        for (int t = 1; t <= testcase; t++) {
+            int money = Integer.parseInt(br.readLine());
+            if (money % 10 != 0) {
+                money -= (money % 10); // 10원 단위 미만은 절삭
+            }
+
+            int[] restMoney = new int[denominations.length];
+
+            // 화폐 단위 배열을 사용하여 반복 처리
+            for (int i = 0; i < denominations.length; i++) {
+                if (money >= denominations[i]) {
+                    restMoney[i] = money / denominations[i];
+                    money %= denominations[i];
+                }
+            }
+
+            System.out.println("#" + t);
+            for (int count : restMoney) {
+                System.out.print(count + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+ */
