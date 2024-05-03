@@ -17,7 +17,7 @@ public class Main {
         int k = Integer.parseInt(st.nextToken());
         Queue<Integer> queue = new LinkedList<>();
         sb.append("<");
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             queue.add(i);
         }
         while (queue.size() > 1) {

@@ -33,7 +33,7 @@ public class Solution {
             if (N <= M) {
                 for (int start = 0; start <= M - N; start++) {
                     int sum = 0;
-                    for (int j = 0; j; j++) {
+                    for (int j = 0; j < N; j++) {
                         sum += a[j] * b[start + j];
                     }
                     maxSum = Math.max(maxSum, sum);

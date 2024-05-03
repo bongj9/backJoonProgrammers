@@ -88,5 +88,56 @@ public class Main {
 
     }
 */
+/*
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int t = Integer.parseInt(br.readLine());
+        for (int i = 0; i < t; i++) {
+
+            String[] input1 = br.readLine().split(" ");
+            int numDocs = Integer.parseInt(input1[0]);
+            int docsIdx = Integer.parseInt(input1[1]);
+
+            String[] input2 = br.readLine().split(" ");
+
+            Deque<int[]> ll = new LinkedList<>();
+            LinkedList<Integer> priority = new LinkedList<>();
+
+            for (int j = 0; j < numDocs; j++) {
+                int[] arr = {j, Integer.parseInt(input2[j])};
+
+                priority.addLast(Integer.parseInt(input2[j]));
+                ll.offerLast(arr);
+            }
+
+            Collections.sort(priority);
+            int count = 0;
+            while (true) {
+                int max = priority.getLast();
+                if (ll.peek()[1] < max) {
+                    ll.offerLast(ll.pollFirst());
+                } else {
+                    if (ll.peek()[0] == docsIdx) {
+                        count++;
+                        System.out.println(count);
+                        break;
+                    } else {
+                        ll.pollFirst();
+                        priority.removeLast();
+                        count++;
+                    }
+                }
+            }
+        }
+    }
+}
+ */
 
 

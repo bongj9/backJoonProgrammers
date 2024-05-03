@@ -13,7 +13,7 @@ class Solution {
         char[] carr= input_string.toCharArray();
 
         char current=' ';
-
+        //첫번째 반복문은 현재값과 그다음값을 비교하는것
         for(char temp:carr){
             if(current!=temp){
                 if(map.containsKey(temp)){

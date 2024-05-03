@@ -10,10 +10,7 @@ public class Solution {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int testCases = Integer.parseInt(br.readLine());
         for (int q = 0; q < testCases; q++) {
-
-
             int[][] board = new int[9][9];
-
             // 스도쿠 보드를 읽어옵니다.
             for (int i = 0; i < 9; i++) {
                 String[] input = br.readLine().split(" ");

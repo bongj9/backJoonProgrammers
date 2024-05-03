@@ -72,6 +72,7 @@ public class Main {
 
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < M; j++) {
+                    //차이
                     int diff = input[i][j] - h;
                     if (diff > 0) {
                         // 블록 제거
