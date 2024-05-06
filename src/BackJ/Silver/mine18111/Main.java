@@ -76,18 +76,18 @@ public class Main {
                     int diff = input[i][j] - h;
                     if (diff > 0) {
                         // 블록 제거
-                        time += diff * 2;
-                        inventory += diff;
+                        time += Math.abs(diff) * 2;
+                        inventory += Math.abs(diff);
                     } else if (diff < 0) {
                         // 블록 추가
-                        time += -diff;
-                        inventory -= -diff;
+                        time += Math.abs(diff);
+                        inventory -= Math.abs(diff);
                     }
                 }
             }
 
             // 인벤토리가 충분하다면 시간 업데이트
-            if (inventory >= 0 && time < answerTime) {
+            if (inventory >= 0 && time <= answerTime) {
                 answerTime = time;
                 answerHeight = h;
             }
